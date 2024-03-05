@@ -1,0 +1,179 @@
+$lightGreen: #8CC343;
+$darkGreen: #14944c;
+$black: #1c1c1c;
+
+.manage-groups {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    width: calc(100vw - 500px);
+    margin-left: 250px;
+    margin-top: 60px;
+    padding-bottom: 70px;
+    padding-top: 50px;
+    @media (max-width:1024px) {
+        width: calc(100dvw - 300px);
+        margin-left: 200px;
+    }
+    @media (max-width: 768px) {
+        width: calc(100dvw - 150px);
+        margin-left: 100px;
+    }
+    @media (max-width: 700px) {
+        margin-left: 80px;
+    }
+
+    .group {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .link {
+            h1 {
+                @media(max-width:768px) {
+                    font-size: 22px;
+                }
+                @media(max-width:425px){
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .buttons{
+            button {
+                cursor: pointer;
+                margin: 10px;
+                width: 150px;
+                border-radius: 30px;
+                padding: 10px 20px;
+                font-size: 22px;
+                border: 1px solid black;
+                background-color: black;
+                @media(max-width:768px) {
+                    font-size: 20px;
+                    padding: 7.5px 15px;
+                    width: 135px;
+                }
+                @media(max-width:425px) {
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    width:120px;
+                }
+            }
+            :first-child {
+                color: $lightGreen;
+                &:hover {
+                    transition: .2s ease-in-out;
+                    color: white;
+                    background-color: $lightGreen;
+                    border-color: $lightGreen;
+                    transform: scale(1.05);
+                }
+            }
+            :last-child {
+                color: red;
+                &:hover {
+                    transition: .2s ease-in-out;
+                    color: white;
+                    background-color: red;
+                    border-color: red;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+    }
+    &:first-child{
+        justify-content: center!important;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 50%;
+        height: 80%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0px 80px rgba(0, 0, 0, 0.5);
+        position: relative;
+
+        .button-close {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .members {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            .member {
+                padding: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                border-bottom: 1px solid black;
+
+                .button-kick {
+                    color: red;
+                    background-color: black;
+                    width: 70px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border-radius: 20px;
+                    &:hover {
+                        transition: .2s ease-in-out;
+                        color: white;
+                        background-color: red;
+                        border-color: red;
+                        transform: scale(1.05);
+                    }
+                }
+                .button-add {
+                    color: $lightGreen;
+                    background-color: black;
+                    width: 70px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border-radius: 20px;
+                    &:hover {
+                        transition: .2s ease-in-out;
+                        color: white;
+                        background-color: $lightGreen;
+                        border-color: $lightGreen;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+    .link {
+        h1 {
+            text-align: center;
+        }
+    }
+    
+
+    
+}

@@ -1,0 +1,60 @@
+
+.auth {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    margin:0;
+    padding:0;
+    background-color: white;
+
+    h1 {
+        font-size: 20px;
+        color: var(--green);
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color: var(--lightGray2);
+        border: 1px solid var(--lightGray1);
+        border-radius: 10px;
+        width: 35%;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            width: 50% !important;
+        }
+        @media (max-width:425px) {
+            width: 80% !important;
+        }
+
+        input {
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: var(--green);
+            color: white;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 12px;
+            color: red;
+            text-align: center;
+        }               
+
+        span{
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}

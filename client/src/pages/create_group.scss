@@ -1,0 +1,127 @@
+$lightGreen: #8CC343;
+$darkGreen: #14944c;
+
+.create-group {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .create-group-container {
+        width: 70%;
+        height: 80%;
+        border: 1px solid black;
+        border-radius: 50px;
+        background-color: #f3f3f3;
+        box-shadow: 0 0 50px gray;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        
+        @media(max-width:525px) {
+            width: 90%;
+        }
+        @media(max-width:425px) {
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        input {
+            font-size: 40px;
+            height: 60px;
+            width: 80%;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            outline: none;
+            
+            @media(max-width:768px) {
+                width: 100%;
+                font-size: 32px;
+            }
+            &:focus, &:active {
+                border-bottom: 1px solid black;
+            }
+        }
+        .users {
+            width: 80%;
+            margin-top: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            overflow: auto;
+            .user {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                text-align: center;
+                
+                button{
+                    background-color: $lightGreen;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    color: white;
+                    border-radius:  10px;
+                    border: 1px solid white;
+                    cursor: pointer;
+                    @media(max-width: 525px) {
+                        padding: 2.5px 5px;
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        transition: 0.3s ease-in-out;
+                        background-color: transparent;
+                        color: $lightGreen;
+                        border-color: $lightGreen;
+                        transform: scale(1.05);
+
+                        .user span {
+                            color: red;
+                        }
+                    }
+                }
+                .column {
+                    flex:2;
+                }
+                .column-button {
+                    flex:1;
+                }
+            }
+        }
+
+        .create-button {
+            width: 80%;
+            padding: 10px 20px;
+            background-color: $lightGreen;
+            border-radius: 20px;
+            font-size: 22px;
+            color: white;
+            border: 1px solid $lightGreen;
+            cursor: pointer;
+            
+            @media(max-width:768px) {
+                width: 60%;
+                font-size: 18px;
+                padding: 7.5px 15px;
+            }
+
+            &:hover {
+                transition: 0.3s ease-in-out;
+                background-color: transparent;
+                color: $lightGreen;
+                border-color: $lightGreen;
+                transform: scale(1.02);
+                font-weight: 600;
+            }
+        }
+    }
+}

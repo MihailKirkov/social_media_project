@@ -1,0 +1,190 @@
+$lightGreen: #8CC343;
+$darkGreen: #14944c;
+$black: #1c1c1c;
+$lightgray: #EDEDED;
+
+.single {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding-top: 50px;
+    display: flex;
+    gap: 50px;
+    @media (max-width:1024px) {
+        margin-left: 200px;
+    }
+    @media (max-width:768px) {
+        margin-left: 100px;
+    }
+    @media (max-width:700px) {
+        margin-left: 90px;
+    }
+    @media (max-width:525px) {
+        flex-direction: column;
+        margin-left: 70px;
+        gap: 200px;
+    }
+
+    .content {
+        background-color: lightgray;
+        padding: 10px 20px;
+        border-radius: 20px;
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: max-content;
+        max-width: 75%;
+
+        @media (max-width:1024px) {
+            flex: 4;
+        }
+        @media (max-width:768px) {
+            flex: 3;
+        }
+        @media (max-width:525px) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 100%;
+            margin-right: 10px;
+        }
+        @media (max-width:425px) {
+            margin-right: 20px;
+        }
+
+        .post-img, .post-video {
+            width: 100%;
+            max-height: 60dvh;
+            object-fit: fill;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.5);
+        }
+        .post-content {
+            max-width: 100%;
+            overflow-y: auto;
+            word-wrap: break-word;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            .info {
+                text-align: start;
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            span {
+                font-weight: bold;
+            }
+
+            .edit {
+                display: flex;
+                gap: 5px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            p {
+                display: flex;
+                text-align: center;
+                
+            }
+        }
+    }
+    .menu {
+        border-left: 2px solid $lightgray;
+        padding-left: 20px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @media (max-width:525px) {
+            text-align: center;
+            gap: 50px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: fill;
+            }
+
+            .video-thumbnail {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                video {
+                    filter: none;
+                    width: 100%;
+                    height: 200px;
+                    object-fit: fill;
+                    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+                    outline: none;
+                }
+                .play-overlay {
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255,255,255,0.2);
+                
+                    .play-icon {
+                        font-size: 3rem;
+                        @media(max-width:768px) {
+                            font-size: 2.5rem;
+                        }
+                        @media (max-width:425px) {
+                            font-size: 2rem;
+                        }
+                        color: black;
+                    }
+                }
+            }
+
+            button {
+                width: max-content;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                background: $lightGreen;
+                border: 1px solid white;
+
+
+                &:hover {
+                    border: 1px solid $lightGreen;
+                    background: white;
+                }
+            }
+        }
+    }
+}

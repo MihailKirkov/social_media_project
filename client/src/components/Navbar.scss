@@ -1,0 +1,125 @@
+$lightGreen: #8CC343;
+$darkGreen: #14944c;
+$black: #1c1c1c;
+$gray: #E0E0E0;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    background-color: $gray;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 90px;
+    z-index: 2;
+    height: 60px;
+    @media (max-width:768px) {
+        padding-left: 80px;
+        height: 55px;
+    }
+    @media (max-width:425px) {
+        padding-left: 70px;
+        height: 50px;
+    }
+
+    .link-home{
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 15px;
+        left: 80px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .page-links {
+        display: flex;
+        gap: 60px;
+        .active {
+            box-shadow: 0 0 10px $lightGreen;
+            font-weight: 600;
+            transform: scale(1.1);
+        }
+        .link {
+            box-sizing: border-box;
+            color: white;
+            font-size: 18px;
+            padding: 5px 30px;
+            background-color: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            border-radius: 10px;
+    
+            &:hover{
+                transition: .3s;
+                color:$lightGreen;
+                background-color: white;
+                box-shadow: 0 0 20px white;
+            }
+        }
+    }
+
+    .socials-links {
+        padding: 20px;
+        overflow: hidden;
+        height: 60px;
+        @media (max-width:768px) {
+            height: 55px;
+        }
+        @media (max-width:425px) {
+            height: 50px;
+        }
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        // background-color: red;
+        .link {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            padding-top: 5px;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                object-fit: contain;
+                &:hover {
+                    transition: .2s ease-in-out;
+                    transform: scale(1.1);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+            label {
+                width: 100%;
+                position: relative;
+                top: -10px;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+    .addpage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 30px;
+        }
+        label {
+            width: 100%;
+            position: relative;
+            top: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    
+}

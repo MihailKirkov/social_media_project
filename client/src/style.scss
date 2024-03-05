@@ -1,0 +1,123 @@
+:root {
+    $lightGreen: #8CC343;
+    $darkGreen: #14944c;
+    $palePurple: #596AA1;
+    $purple: #5E61A6;
+    $lightPurple: #ADB5CF;
+    $pink: #E7DBEB;
+    $darkGray: #808080;
+    $lightGray1: #E2E2E2;
+    $lightGray2: #E8E8E8;
+    $gray: #D9D9D9;
+    $white: #FBFBFB;
+    $black: #100F09;
+    $asdf: #148512 !important;
+    $red: #DB0C0C;
+    $beige: #F1F1E8;
+}
+.custom-file-upload {
+    position: relative;
+    background-image: url('https://cdn.britannica.com/96/1296-050-4A65097D/gelding-bay-coat.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 200px; /* Adjust this value to the desired height */
+    border: 2px dashed #aaa; /* Add border to indicate drop zone */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    // margin: 0;
+    // padding: 0;
+}
+.m-0 {
+    margin: 0;
+}
+.p-0 {
+    padding:0;
+}
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.jc-center {
+    justify-content: center;
+}
+.jc-space-between {
+    justify-content: space-between;
+}
+.jc-space-around {
+    justify-content: space-around;
+}
+.ai-center {
+    align-items: center;
+}
+.ai-start {
+    align-items: flex-start;
+}
+.ai-end {
+    align-items: flex-end;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    .container {
+        background-color: white;
+        color: black;
+        z-index: 0;
+        width: 100dvw;
+        margin:0;
+        padding:0;
+
+        
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+        // NO ACCESS
+
+        .no-access {
+            width:calc(100dvw - 100px);
+            margin-left: 100px;
+            height:100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: red;
+            text-align: center;
+            @media (max-width: 768px) {
+                font-size: 32px;
+            }
+        }
+
+        // MANAGE GROUPS
+
+        
+    }
+}   
